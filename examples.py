@@ -1,11 +1,11 @@
-# -*- coding: utf-8 -*-
+#%% -*- coding: utf-8 -*-
 """
 Examples of plots and calculations using the tmm package.
 """
 
 from __future__ import division, print_function, absolute_import
 
-from .tmm_core import (coh_tmm, unpolarized_RT, ellips,
+from tmm_core import (coh_tmm, unpolarized_RT, ellips,
                        position_resolved, find_in_structure_with_inf)
 
 from numpy import pi, linspace, inf, array
@@ -15,13 +15,13 @@ import matplotlib.pyplot as plt
 try:
     import colorpy.illuminants
     import colorpy.colormodels
-    from . import color
+    from import color
     colors_were_imported = True
 except ImportError:
     # without colorpy, you can't run sample5(), but everything else is fine.
     colors_were_imported = False
 
-
+#%%
 # "5 * degree" is 5 degrees expressed in radians
 # "1.2 / degree" is 1.2 radians expressed in degrees
 degree = pi/180
@@ -255,3 +255,5 @@ def sample6():
     plt.title('Reflection of p-polarized light with Surface Plasmon Resonance\n'
               'Compare with http://doi.org/10.2320/matertrans.M2010003 Fig 6a')
     plt.show()
+
+# %%
